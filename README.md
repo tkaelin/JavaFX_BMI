@@ -1,7 +1,7 @@
 ## Content
 
 BMI Calculator runs with JavaFX, created in Visual Studio Code. 
-Version 2: Normal window, calculation starts on button clicked.
+Version 4: Calculation starts on editing values. Different Views possible.
 
 ## Folder Structure
 
