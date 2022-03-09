@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BMIController">
+   <children>
+      <Label layoutX="74.0" layoutY="42.0" text="Size in cm" />
+      <TextField id="SizeInCm" fx:id="SizeInCm" layoutX="182.0" layoutY="35.0" promptText="Grösse in cm" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="156.0" />
+      <Label layoutX="74.0" layoutY="114.0" text="Weight in kg" />
+      <TextField id="WeightInKG" fx:id="WeightInKG" layoutX="182.0" layoutY="107.0" promptText="Gewicht in kg" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="156.0" />
+      <Button id="CalcBMI" fx:id="CalcBMI" layoutX="182.0" layoutY="171.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="262.0" text="Calculate BMI" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="156.0" />
+      <TextArea fx:id="Output" layoutX="59.0" layoutY="231.0" prefHeight="132.0" prefWidth="474.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="231.0" />
+   </children>
+</AnchorPane>
