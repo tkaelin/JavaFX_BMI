@@ -1,6 +1,7 @@
 ## Content
 
-BMI Calculator runs with JavaFX, created in Visual Studio Code
+BMI Calculator runs with JavaFX, created in Visual Studio Code. 
+Version 2: Normal window, calculation starts on button clicked.
 
 ## Folder Structure
 
