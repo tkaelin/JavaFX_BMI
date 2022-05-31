@@ -105,14 +105,14 @@ public class BMIController {
 	}
 
 	private void connectFields() {
-		static final String regexpression = "([1-9][0-9]*.*)?";
+		final String numInputExpr = "([1-9][0-9]*.*)?";
 		/* Validation of input data */
 		weightInKgTextfield.setTextFormatter(
-				new TextFormatter<>(change -> (change.getControlNewText().matches(regexpression)) ? change : null));
+				new TextFormatter<>(change -> (change.getControlNewText().matches(numInputExpr)) ? change : null));
 		sizeInCmTextfield.setTextFormatter(
-				new TextFormatter<>(change -> (change.getControlNewText().matches(regexpression)) ? change : null));
+				new TextFormatter<>(change -> (change.getControlNewText().matches(numInputExpr)) ? change : null));
 		ageInputTextfield.setTextFormatter(
-				new TextFormatter<>(change -> (change.getControlNewText().matches(regexpression)) ? change : null));
+				new TextFormatter<>(change -> (change.getControlNewText().matches(numInputExpr)) ? change : null));
 
 		StringConverter<Number> numberStringConverter = new NumberStringConverter();
 
