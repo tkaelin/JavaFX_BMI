@@ -6,13 +6,13 @@ import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Cylinder;
 import javafx.scene.shape.Sphere;
 
-public class BMIGraphController {
+public class GraphController {
 
-	private BMIModel bmiModel;
-	private BMIService bmiService;
+	private Model bmiModel;
+	private Service bmiService;
 
-	public void setModel(BMIModel model) {
-		bmiService = new BMIService();
+	public void setModel(Model model) {
+		bmiService = new Service();
 		bmiModel = model;
 		bmiModel.getFullResultProperty().addListener((observable, oldValue, newValue) -> {
 			setChanged();
@@ -21,7 +21,7 @@ public class BMIGraphController {
 
 	private void setChanged() {
 		final PhongMaterial theMaterial = new PhongMaterial();
-		Boolean isRecommended = BMIService.getIsBMIRecommended(bmiModel.getAgeProperty().get(), bmiModel.getBMI());
+		Boolean isRecommended = Service.getIsBMIRecommended(bmiModel.getAgeProperty().get(), bmiModel.getBMI());
 		if (isRecommended == null) {
 			theMaterial.setDiffuseColor(Color.YELLOW);
 		} else if (isRecommended) {

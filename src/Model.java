@@ -1,4 +1,3 @@
-
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.IntegerProperty;
@@ -8,9 +7,9 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class BMIModel {
+public class Model {
 
-	private final BMIService bmiService;
+	private final Service bmiService;
 
 	private final IntegerProperty weightInKgProperty = new SimpleIntegerProperty();
 	private final IntegerProperty sizeInCmProperty = new SimpleIntegerProperty();
@@ -19,8 +18,8 @@ public class BMIModel {
 	private final DoubleProperty bmiProperty = new SimpleDoubleProperty();
 	private final StringProperty bmiFullResultProperty = new SimpleStringProperty();
 
-	public BMIModel() {
-		bmiService = new BMIService();
+	public Model() {
+		bmiService = new Service();
 
 		sizeInCmProperty.addListener((observable, oldValue, newValue) -> {
 			setChanged();

@@ -22,13 +22,13 @@ import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.util.converter.NumberStringConverter;
 
-public class BMIController {
+public class Controller {
 
 	private final String SEX_FEMALE = "Female";
 	private final String SEX_MALE = "Male";
 
-	private BMIModel bmi = new BMIModel();
-	private BMIGraphController graphController;
+	private Model bmi = new Model();
+	private GraphController graphController;
 
 	@FXML
 	private ResourceBundle resources;
@@ -71,22 +71,22 @@ public class BMIController {
 
 	@FXML
 	void initialize() {
-		assert baseVBox != null : "fx:id=\"baseVBox\" was not injected: check your FXML file 'BMIView.fxml'.";
-		assert baseGridPane != null : "fx:id=\"baseGridPane\" was not injected: check your FXML file 'BMIView.fxml'.";
-		assert weightSlider != null : "fx:id=\"weightSlider\" was not injected: check your FXML file 'BMIView.fxml'.";
+		assert baseVBox != null : "fx:id=\"baseVBox\" was not injected: check your FXML file 'View.fxml'.";
+		assert baseGridPane != null : "fx:id=\"baseGridPane\" was not injected: check your FXML file 'View.fxml'.";
+		assert weightSlider != null : "fx:id=\"weightSlider\" was not injected: check your FXML file 'View.fxml'.";
 		assert weightInKgTextfield != null
-				: "fx:id=\"weightInKgTextfield\" was not injected: check your FXML file 'BMIView.fxml'.";
-		assert sizeSlider != null : "fx:id=\"sizeSlider\" was not injected: check your FXML file 'BMIView.fxml'.";
+				: "fx:id=\"weightInKgTextfield\" was not injected: check your FXML file 'View.fxml'.";
+		assert sizeSlider != null : "fx:id=\"sizeSlider\" was not injected: check your FXML file 'View.fxml'.";
 		assert sizeInCmTextfield != null
-				: "fx:id=\"sizeInCmTextfield\" was not injected: check your FXML file 'BMIView.fxml'.";
-		assert sexSelection != null : "fx:id=\"sexSelection\" was not injected: check your FXML file 'BMIView.fxml'.";
-		assert ageSlider != null : "fx:id=\"ageSlider\" was not injected: check your FXML file 'BMIView.fxml'.";
+				: "fx:id=\"sizeInCmTextfield\" was not injected: check your FXML file 'View.fxml'.";
+		assert sexSelection != null : "fx:id=\"sexSelection\" was not injected: check your FXML file 'View.fxml'.";
+		assert ageSlider != null : "fx:id=\"ageSlider\" was not injected: check your FXML file 'View.fxml'.";
 		assert ageInputTextfield != null
-				: "fx:id=\"ageInputTextfield\" was not injected: check your FXML file 'BMIView.fxml'.";
+				: "fx:id=\"ageInputTextfield\" was not injected: check your FXML file 'View.fxml'.";
 		assert showGraphButton != null
-				: "fx:id=\"showGraphButton\" was not injected: check your FXML file 'BMIView.fxml'.";
+				: "fx:id=\"showGraphButton\" was not injected: check your FXML file 'View.fxml'.";
 		assert resultTextarea != null
-				: "fx:id=\"resultTextarea\" was not injected: check your FXML file 'BMIView.fxml'.";
+				: "fx:id=\"resultTextarea\" was not injected: check your FXML file 'View.fxml'.";
 
 		fillSelectableEntries();
 		connectFields();
@@ -141,9 +141,9 @@ public class BMIController {
 	}
 
 	private void showGraphView() throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("BMIGraphView.fxml"));
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("GraphView.fxml"));
 		Parent root = loader.load();
-		graphController = (BMIGraphController) loader.getController();
+		graphController = (GraphController) loader.getController();
 		graphController.setModel(bmi);
 
 		if (false) {
@@ -154,7 +154,7 @@ public class BMIController {
 			stage.initOwner(baseGridPane.getScene().getWindow());
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
-			scene.getStylesheets().add(getClass().getResource("BMISettings.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("Settings.css").toExternalForm());
 
 			stage.show();
 		}

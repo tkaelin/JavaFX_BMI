@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Launch App",
             "request": "launch",
-            "mainClass": "BMIApp",
+            "mainClass": "App",
             "projectName": "JavaFX_BMI_fa426017",
             "vmArgs": "--module-path  \"C:/Program Files/Java/javafx-sdk-18.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
         }

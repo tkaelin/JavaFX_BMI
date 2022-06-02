@@ -1,4 +1,4 @@
-public class BMIService {
+public class Service {
 
     public final static String RATING_UNDERWEIGHT = "underweight";
     public final static String RATING_NORMALWEIGHT = "normal weight";

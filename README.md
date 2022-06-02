@@ -34,7 +34,7 @@ Following you will find the process description for this two options
 `javac --module-path "%JAVAFX_HOME%" --add-modules "javafx.controls,javafx.fxml" -d ./bin  ./src/*.java`
 
 3) Run the application
-`java --module-path "%JAVAFX_HOME%" --add-modules "javafx.controls,javafx.fxml" -cp ./bin BMIApp`
+`java --module-path "%JAVAFX_HOME%" --add-modules "javafx.controls,javafx.fxml" -cp ./bin App`
 
 
 ### Using Visual Studio Code
