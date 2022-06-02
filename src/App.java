@@ -1,4 +1,6 @@
 
+import java.net.URL;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,10 +18,19 @@ public class App extends Application {
 
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("View.fxml"));
 		Parent root = loader.load();
-		// BMIController controller = loader.getController();
+		/*
+		 * if you need access to the controller, uncomment the following line
+		 * BMIController controller = loader.getController();
+		 */
 
 		Scene scene = new Scene(root);
-		scene.getStylesheets().add(getClass().getResource("Settings.css").toExternalForm());
+
+		/* use the stylesheet, if there is one defined */
+		URL settingsURL = getClass().getResource("Settings.css");
+		if (settingsURL != null) {
+			scene.getStylesheets().add(settingsURL.toExternalForm());
+		}
+
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Calculate BMI");
 		primaryStage.show();
