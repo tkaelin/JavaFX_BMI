@@ -9,8 +9,10 @@ import javafx.scene.shape.Sphere;
 public class BMIGraphController {
 
 	private BMIModel bmiModel;
+	private BMIService bmiService;
 
 	public void setModel(BMIModel model) {
+		bmiService = new BMIService();
 		bmiModel = model;
 		bmiModel.getFullResultProperty().addListener((observable, oldValue, newValue) -> {
 			setChanged();
@@ -19,7 +21,7 @@ public class BMIGraphController {
 
 	private void setChanged() {
 		final PhongMaterial theMaterial = new PhongMaterial();
-		Boolean isRecommended = BMIModel.getIsBMIRecommended(bmiModel.getAgeProperty().get(), bmiModel.getBMI());
+		Boolean isRecommended = BMIService.getIsBMIRecommended(bmiModel.getAgeProperty().get(), bmiModel.getBMI());
 		if (isRecommended == null) {
 			theMaterial.setDiffuseColor(Color.YELLOW);
 		} else if (isRecommended) {
