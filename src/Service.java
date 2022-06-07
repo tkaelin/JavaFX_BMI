@@ -17,7 +17,7 @@ public class Service {
     }
 
     public String getBMIResult(double size, double weight, int age, boolean isFemale) {
-        String personType = isFemale ? "woman" : " man";
+        String personType = isFemale ? "woman" : "man";
         double bmiValue = this.getBMI(size, weight);
         return "You are a " + personType + " in the age of " + Integer.toString(age) + ".\n"
                 + "You have a BMI of " + bmiValue + "\n" + getIsBMIRecommendedString(age, bmiValue) + "\n"
