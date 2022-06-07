@@ -21,12 +21,8 @@ The `JAVA PROJECTS` view (in Visual Studio Code) allows you to manage your depen
 
 There are a lot of ways to build and execute this application. In every case, you have to download and install the Java SDK and the JavaFX SDK as written on [Getting Started with JavaFX](https://openjfx.io/openjfx-docs/#install-java).
 
-Following you will find the process description for this two options
-- Java native (from the Command Line)
-- Visual Studio Code
-
 <details>
-<summary>Using Java native</summary>
+<summary>Using Java native (from the Command Line)</summary>
  
 1) Define an environment variable with the path to the JavaFX "/lib" folder
    `set JAVA_HOME={path to JavaFX "lib" folder}`
