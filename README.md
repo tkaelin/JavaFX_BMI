@@ -46,7 +46,7 @@ Following you will find the process description for this two options
 1) [Download](https://www.jetbrains.com/de-de/idea/download/) and install Intellij
 2) Add the JavaFX module to the project
    1) Open Project Structure
-   2) Click on the "Modules" tab
+   2) Click on the "Global Libraries" tab
    3) Click on the "Add" button
    4) Click on the Java
    5) Navigate to the JavaFX installation folder and then to lib and select the following modules
