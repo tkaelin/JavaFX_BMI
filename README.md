@@ -48,7 +48,7 @@ Following you will find the process description for this two options
    1) Open Project Structure
    2) Click on the "Global Libraries" tab
    3) Click on the "Add" button
-   4) Click on the Java
+   4) Click on Java
    5) Navigate to the JavaFX installation folder and then to lib and select the following modules
       - javafx-base
       - javafx-controls
