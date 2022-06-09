@@ -25,7 +25,7 @@ There are a lot of ways to build and execute this application. In every case, yo
 <summary>Using Java native (from the Command Line)</summary>
  
 1) Define an environment variable with the path to the JavaFX "/lib" folder
-   `set JAVA_HOME={path to JavaFX "lib" folder}`
+   `set JAVAFX_HOME={path to JavaFX "lib" folder}`
 
 2) Build the application
    `javac --module-path "%JAVAFX_HOME%" --add-modules "javafx.controls,javafx.fxml" -d ./bin  ./src/*.java`
